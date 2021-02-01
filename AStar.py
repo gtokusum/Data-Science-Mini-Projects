@@ -8,8 +8,8 @@ import pygame
 import math
 from queue import PriorityQueue
 
-WIDTH = 800
-WIN = pygame.display.set_mode((WIDTH,WIDTH))
+WIDTH = 1200
+WIN = pygame.display.set_mode((1200,1200))
 pygame.display.set_caption("A* Path Finding Algorithm")
 
 
@@ -99,12 +99,14 @@ def h(p1,p2):
     x2,y2 = p2
     return abs(x1-x2) + abs(y1-y2)
 
+# reconstruct the path to make sure path is the shortest distance 
 def reconstruct_path(came_from,current,draw):
     while current in came_from:
         current = came_from[current]
         current.make_path()
         draw()
 
+# Astar algo
 def algorithm(draw,grid,start,end):
     count = 0
     open_set = PriorityQueue()
@@ -182,7 +184,7 @@ def get_clicked_pos(pos,rows,width):
     col = x // gap
     return row,col
 
-
+# main function 
 def main(win,width):
     ROWS = 50
     grid = make_grid(ROWS,width)
