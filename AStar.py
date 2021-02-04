@@ -9,7 +9,7 @@ import math
 from queue import PriorityQueue
 
 WIDTH = 1200
-WIN = pygame.display.set_mode((1200,1200))
+WIN = pygame.display.set_mode((WIDTH,WIDTH))
 pygame.display.set_caption("A* Path Finding Algorithm")
 
 
@@ -227,6 +227,7 @@ def main(win,width):
                     start = None
                 elif spot == end:
                     end = None
+            #start algo with spacebar
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE and start and end:
                     for row in grid:
