@@ -7,7 +7,7 @@ if a dead cell has 3 alive neighbors that cell becomes alive.
 '''
 import pygame
 
-WIDTH = 1200
+WIDTH = 900
 WIN = pygame.display.set_mode((WIDTH,WIDTH))
 pygame.display.set_caption("Cellular Automata")
 
