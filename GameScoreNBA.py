@@ -51,6 +51,6 @@ def get_holl(pts,fg,fga,fta,ft,orb,drb,stl,ast,blk,pf,tov):
 
 
 if __name__ == '__main__':
-    year = 2021
+    year = 2022
     score = getScore(year)
     print(score)
